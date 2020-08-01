@@ -9,8 +9,8 @@ export default function EmLancamento() {
 
   useEffect(() => {
     async function getLancamento(){
-       const response = await api.get('animes/lancamento');
-           console.log(response.data);
+       const response = await api.get('/animes/recentes');
+       
            setAnimes(response.data)
     }
     getLancamento();
@@ -18,41 +18,55 @@ export default function EmLancamento() {
 
   return (
     <>
-    <section className="home-about-section spad">
-        <div className="container">
-            <div className="row">
 
-            </div>
-        </div>
-    </section>
     <section className="team-member-section">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12">
                     <div className="section-title">
                         <h2>Animes Em Lançamento</h2>
-                        <p>These are our communicators, you can see each person information</p>
+                        <h4>Assista Agora!</h4>
                     </div>
                 </div>
             </div>
         </div>
-        {animes.map(anime => (
-        <div key={anime.id} className="member-item set-bg"  style={{backgroundImage: "url(https://i.pinimg.com/564x/91/04/03/910403cbab5d25f68d4674633ec946de.jpg)"}}>
-            <div className="mi-social">
-                <div className="mi-social-inner bg-gradient">
-                <Link to={`/assistir/${anime.id}/${anime.slug}`} activeClassName="active">Assistir Episodio</Link>
+        </section>
+
+        <section class="blog-section spad">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                    {animes.length == 0 ? 
+                    <>
+                    <div className="col-md-12" align="center"><img src="https://media.giphy.com/media/jt7bAtEijhurm/source.gif" class="giphy-embed" /></div>
+                    </>
+                    :
+                    animes.map(anime => (
+
+                        <div class="col-md-3" key={anime.id}>
+                            <div class="blog-item set-bg" style={{backgroundImage: `url(${anime.Imagem})`}}>
+                            <Link to={`/assistir/${anime.Id}/${anime.episodeSlug}`}><div class="bi-tag bg-gradient">Assistir Episodio</div></Link>
+                                <div class="bi-text" style={{backgroundColor:"black"}}>
+                                <h5 ><Link to={`/assistir/${anime.Id}/${anime.episodeSlug}`} >{anime.Nome}</Link></h5>
+                                <span><i class="fa fa-clock-o"></i>{anime.Categoria}</span>
+                                
+                                </div>
+                            </div>
                     
+                            
+                        </div>
+                        ))
+        
+                        }
+                    </div>
                 </div>
             </div>
-            <div className="mi-text">
-                <h5>{anime.title}</h5>
-                <span>{anime.title}</span>
-            </div>
         </div>
-        ))}
+    </section>
+        
 
         
-    </section>
     </>
   );
 }

@@ -306,7 +306,7 @@ ol {
 .nav-menu .mainmenu ul li .dropdown {
 	position: absolute;
 	width: 180px;
-	background: #ffffff;
+	background: #171822;
 	z-index: 99;
 	left: 0;
 	top: 130px;
@@ -706,7 +706,7 @@ ol {
 }
 
 .schedule-tab .st-content .sc-text h4 {
-	color: #171822;
+	color: #ffffff;
 	font-weight: 600;
 	margin-bottom: 10px;
 }
@@ -1236,7 +1236,7 @@ ol {
 
 .breadcrumb-text h2 {
 	font-size: 40px;
-	color: #171822;
+	color: #FFFFFF;
 	font-weight: 600;
 	margin-bottom: 14px;
 }
@@ -1301,7 +1301,7 @@ ol {
 }
 
 .about-text h3 {
-	color: #171822;
+	color: #FFF;
 	font-weight: 600;
 	margin-bottom: 25px;
 }
@@ -1362,7 +1362,7 @@ ol {
 }
 
 .story-item .si-text h4 {
-	color: #171822;
+	color: #fff;
 	font-weight: 600;
 	line-height: 36px;
 	margin-bottom: 14px;
@@ -1496,10 +1496,11 @@ ol {
 
 .speaker-item .si-text .si-title {
 	margin-bottom: 28px;
+	
 }
 
 .speaker-item .si-text .si-title h4 {
-	color: #171822;
+	color: #FFFFFF;
 	font-weight: 600;
 	margin-bottom: 13px;
 }
@@ -1863,7 +1864,7 @@ ol {
 
 .bd-text .bd-quote p {
 	font-size: 18px;
-	color: #171822;
+	color: #fff;
 	font-weight: 500;
 	line-height: 30px;
 }
@@ -1891,7 +1892,7 @@ ol {
 }
 
 .bd-text .bd-more-text h4 {
-	color: #171822;
+	color: #FFF;
 	font-weight: 600;
 	margin-bottom: 22px;
 }
@@ -1968,7 +1969,7 @@ ol {
 -----------------------*/
 
 .comment-section h3 {
-	color: #171822;
+	color: #FFF;
 	font-weight: 600;
 }
 
@@ -2199,7 +2200,7 @@ ol {
 }
 
 .cc-map .map-hover .map-hover-inner p {
-	color: #171822;
+	color: #fff;
 }
 
 /*---------------------

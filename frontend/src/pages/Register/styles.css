@@ -20,7 +20,9 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.register-container {
+  color: black;
+}
 .register-container .content section {
   width: 100%;
   max-width: 380px;

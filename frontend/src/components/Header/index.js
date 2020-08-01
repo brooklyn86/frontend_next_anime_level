@@ -4,21 +4,26 @@ import { FiLogIn } from 'react-icons/fi';
 
 import api from '../../services/api';
 import logo from '../../assets/img/logo.png'
+
 export default function Header() {
+  const accessToken = localStorage.getItem('bearer');
 
   return (
-    <section className="hero-section set-bg" style={{backgroundImage: "url(https://images8.alphacoders.com/632/thumb-1920-632051.png)"}}>
+    <section className="hero-section set-bg " data-setbg="https://images8.alphacoders.com/632/thumb-1920-632051.png">
         <div className="container">
             <div className="row">
                 <div className="col-lg-7">
                     <div className="hero-text">
                         
                         <h2>Anime NEXT Level<br />
-                            <span>Assista seu melhores animes e faça novos amigos!</span>
+                            <span>Assista seus melhores animes e faça novos amigos!</span>
                                                    
                         </h2>
-                        <a href="#" className="primary-btn">Assistir Animes</a>
-                        <a href="#" className="primary-btn info">Entrar na comunidade</a>
+                        <Link to="/todos-os-animes" className="primary-btn">Assistir Animes</Link>
+                        {accessToken == null && 
+                        <Link to="/login" className="primary-btn info">Entrar na comunidade</Link>
+                        
+                        }
 
                     </div>
                 </div>
